@@ -15,6 +15,7 @@
   <h1>New Task</h1>
     <form action="/tasks" method="POST">
       <div class="form-group">
+        @csrf
         <label for="description">Task Description</label>
         <input type="text" class="form-control" id="description" name="description">
       </div>
