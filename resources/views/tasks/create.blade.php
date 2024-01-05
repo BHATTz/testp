@@ -12,17 +12,26 @@
 @extends('layouts.app')  
 
 @section('content')
-  <h1>New Task</h1>
+<center>
+  <h1>NEW TASK</h1>
+  <br>
     <form action="/tasks" method="POST">
       <div class="form-group">
         @csrf
-        <label for="description">Task Description</label>
+        <label for="description">TASK DESCRIPTION</label>
         <input type="text" class="form-control" id="description" name="description">
       </div>
-      <div calss="form-group">
-      <button type="submit" class="btn btn-primary">Add Task</button>
+      <br>
+      <div class="btn-toolbar d-flex justify-content-center">
+        <div class="form-group px-8">
+            <button type="submit" class="btn btn-primary btn-group mr-2">ADD TASK</button>
+        </div>     
+        <div class="btn-group">
+          <a href="/tasks/" class="btn btn-secondary position-relevent "> VIEW TASK</a>
+        </div>
     </div>
     </form>
+  </center>
 @endsection
 
 {{-- </body>

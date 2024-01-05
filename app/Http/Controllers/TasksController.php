@@ -2,18 +2,26 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+use App\Task;
 
 class TasksController extends Controller
 {
     public function index(){
-        return view('tasks.index');
+
+        $tasks =Task::orderBy('id', 'DESC')
+        ->get();
+        return view('tasks.index', [
+            'tasks' => $tasks
+        ]);
     }
     public function create(){
         return view('tasks.create');
     }
     public function store(){
-        // return 'your data successfully submitted';
-        return request()->all();
+        $task = Task::create([
+            'description' => request('description')
+        ]);
+
+        return redirect('/');
     }
 }
