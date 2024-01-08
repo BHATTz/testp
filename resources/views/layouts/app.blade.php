@@ -8,27 +8,35 @@
     <title>Task list</title>
 </head>
 <body>
-
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="/">Todo-App</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav">
-            <li class="nav-item">
-                <a class="nav-link" href="/">All Task</a>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light text-center">
+      <a class="navbar-brand" href="/">
+        <img src="{{ asset('notes.png') }}" width="30" height="30" class="d-inline-block align-top" alt="Notes Icon">
+        Todo-App
+    </a>    
+        <div class="navbar-expand-lg" id="navbarNav">
+          <ul class="navbar-nav ml-auto d-flex flex-column flex-lg-row">
+              <li class="nav-item">
+                  <a class="nav-link" href="/">All Tasks</a>
               </li>
-            <li class="nav-item active">
-              <a class="nav-link" href="/tasks/create">New Task</a>
-            </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="/tasks/create">Add New Task</a>
+              </li>
           </ul>
-        </div>
-      </nav>
-
+      </div>
+    </nav>
 
     <div class="container">
-    @yield('content')
+      @yield('content')
     </div>
+
+    <footer class="bg-body-tertiary text-center fixed-bottom">
+      <div class="container p-1"></div>
+      <div class="text-center p-3">
+          © 2024 Copyright: Todo-App
+          <a class="text-body" href="/tasks/create">Todo-App</a>
+      </div>
+  </footer>
+  
+    
 </body>
 </html>
