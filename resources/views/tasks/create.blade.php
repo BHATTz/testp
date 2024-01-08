@@ -13,7 +13,7 @@
     </div>
     <br>
     <div class="btn-toolbar d-flex justify-content-center">
-      <div class="form-group px-4"> <!-- Added space -->
+      <div class="form-group px-4">
         <button type="submit" class="btn btn-primary btn-group mr-2">ADD TASK</button>
       </div>     
       <div class="btn-group">
